@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
@@ -52,6 +53,7 @@ public class Home extends Activity implements View.OnClickListener {
 
         application = (MyApplication) getApplication();
 
+        Log.i("Home", "下面有坑，注意setText必须是字符串形式");
         //根据application里去获取sharedpreference取得之前用户保存的设置
         tv_home_target.setText(application.getTarget()+"");
         tv_home_record.setText(application.getHighestRecord()+"");
